@@ -37,6 +37,7 @@
         line-height: 125%;
         font-size: 150%;
         text-transform: uppercase;
+        letter-spacing: 2px;
       }
 
       .nowrap {
@@ -78,9 +79,13 @@
         border: 0;
         padding: 10px;
         box-sizing: border-box;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        outline: none;
+        transition: all 150ms ease-in;
+      }
+
+      input:focus, select:focus, textarea:focus, button:focus {
+        box-shadow: 0 0 5px rgba(255, 48, 138, 1);
+        border: 1px rgba(255, 48, 138, 1);
       }
 
       textarea {
@@ -98,7 +103,7 @@
         letter-spacing: 3px;
       }
 
-      button:hover {
+      button:hover, button:focus {
         color: #555555;
         background-color: #58ed70;
       }
@@ -123,7 +128,7 @@
           <form name="rsvp" method="POST" netlify>
             <div class="form-group">
               <label for="name">Your name(s)?</label>
-              <input type="input" id="name" name="name">
+              <input type="input" id="name" name="name" autocomplete="off" autofill="off">
             </div>
 
             <div class="form-group">
@@ -132,13 +137,13 @@
                 <option value="1">Just me</option>
                 <option value="2">Me + slam pig</option>
                 <option value="3">Me + modest squad (3 total)</option>
-                <option value="4">Me + biddy parade (4 total)</option>
+                <option value="4">Me + biddy parade (4+ total)</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="comments">What do you have to say for yourself?</label>
-              <textarea id="comments" name="comments"></textarea>
+              <textarea id="comments" name="comments" autocomplete="off" autofill="off"></textarea>
             </div>
 
             <div class="form-group">
