@@ -2,25 +2,140 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Housewarming Party</title>
+    <title>Holden Housewarming Party</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <style type="text/css">
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #ff308a;
+        font-family: 'Montserrat', sans-serif;
+        color: #555555;
+      }
+
+      .container {
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 40px 0;
+        background-color: #e0e0e0;
+      }
+
+      .rsvp {
+        background-color: #ffffff;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .rsvp-content {
+        text-align: center;
+        padding: 30px;
+      }
+
+      .big-copy {
+        line-height: 125%;
+        font-size: 150%;
+        text-transform: uppercase;
+      }
+
+      .header-image {
+        border: 0;
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .form-group {
+        padding: 20px 0;
+      }
+
+      p {
+        line-height: 150%;
+      }
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      input, select, textarea, button {
+        display: block;
+        width: 100%;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      button {
+        color: #ffffff;
+        background-color: #ff308a;
+        transition: all 300ms ease-in;
+        padding: 20px;
+        text-transform: uppercase;
+        border: 0;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+
+      button:hover {
+        color: #555555;
+        background-color: #58ed70;
+      }
+    </style>
   </head>
   <body>
-    <form name="rsvp" method="POST" netlify>
-      <label for="name">Name:</label>
-      <input type="input" id="name" name="name">
+    <div class="container">
+      <div class="rsvp">
+        <img class="header-image" src="./images/housewarming-header.gif" alt="housewarming party">
 
-      <label for="attendee_count"># of attendees</label>
-      <select id="attendee_count" name="attendee_count">
-        <option value="1">1</option>
-        <option value="1">2</option>
-        <option value="1">3</option>
-        <option value="1">4</option>
-      </select>
+        <div class="rsvp-content">
+          <p>
+            We got a house.<br>
+            <strong>Let’s warm it up.</strong>
+          </p>
 
-      <label for="comments">Comments</label>
-      <textarea id="comments" name="comments"></textarea>
+          <p class="big-copy">
+            <strong>Saturday, December 8, 2018</strong><br>
+            6pm til
+          </p>
 
-      <button type="submit">Submit</button>
-    </form>
+          <form name="rsvp" method="POST" netlify>
+            <div class="form-group">
+              <label for="name">Your name(s)?</label>
+              <input type="input" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+              <label for="attendee_count">How many of you are there?</label>
+              <select id="attendee_count" name="attendee_count">
+                <option value="1">Just me</option>
+                <option value="2">Me + slam pig</option>
+                <option value="3">Me + modest squad (3 total)</option>
+                <option value="4">Me + biddy parade (4 total)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="comments">What do you have to say for yourself?</label>
+              <textarea id="comments" name="comments"></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
