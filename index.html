@@ -6,6 +6,7 @@
     <title>Holden Housewarming Party</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="./styles/main.css" rel="stylesheet">
+    <script type="text/javascript" src="./scripts/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -30,8 +31,16 @@
             </div>
 
             <div class="form-group">
+              <label for="attending">Can you make it?</label>
+              <select id="attending" name="attending" class="js-attending-select">
+                <option value="Yes">Yes!</option>
+                <option value="No">No.</option>
+              </select>
+            </div>
+
+            <div class="form-group js-for-attendees">
               <label for="attendee_count">How many of you are there?</label>
-              <select id="attendee_count" name="attendee_count">
+              <select id="attendee_count" name="attendee_count" class="js-for-attendees">
                 <option value="1">Just me</option>
                 <option value="2">Me + slam pig</option>
                 <option value="3">Me + modest squad (3 total)</option>
@@ -39,8 +48,12 @@
               </select>
             </div>
 
+            <div class="form-group js-for-non-attendees hidden big-copy">
+              😭😭😭
+            </div>
+
             <div class="form-group">
-              <label for="comments">What do you have to say for yourself?</label>
+              <label for="comments" class=".js-for-attendees">Anything to add?</label>
               <textarea id="comments" name="comments" autocomplete="off" autofill="off"></textarea>
             </div>
 
