@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ff308a;
+  font-family: 'Montserrat', sans-serif;
+  color: #555555;
+}
+
+.container {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #e0e0e0;
+}
+
+.content-container {
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+  padding: 30px;
+}
+
+.big-copy {
+  line-height: 125%;
+  font-size: 150%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.header-image {
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.form-group {
+  padding: 20px 0;
+}
+
+p {
+  line-height: 150%;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, select, textarea, button {
+  display: block;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: #f8f8f8;
+  border: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 150ms ease-in;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+  box-shadow: 0 0 5px rgba(255, 48, 138, 1);
+  border: 1px rgba(255, 48, 138, 1);
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  color: #ffffff;
+  background-color: #ff308a;
+  transition: all 300ms ease-in;
+  padding: 20px;
+  text-transform: uppercase;
+  border: 0;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+button:hover, button:focus {
+  color: #555555;
+  background-color: #58ed70;
+  cursor: pointer;
+}
