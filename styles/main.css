@@ -32,6 +32,15 @@ html, body {
   letter-spacing: 2px;
 }
 
+a.address {
+  color: #ff308a;
+  text-decoration: none;
+}
+
+a.address:hover {
+  font-weight: 700;
+}
+
 .nowrap {
   white-space: nowrap;
 }
