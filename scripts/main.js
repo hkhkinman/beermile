@@ -1,15 +1,23 @@
 function showElements(elements) {
   elements.forEach(function(element) {
     element.classList.remove("hidden");
-    element.disabled = false;
-  })
+
+    element.querySelectorAll("input").forEach(function(input) {
+      input.disabled = false;
+      input.required = true;
+    });
+  });
 }
 
 function hideElements(elements) {
   elements.forEach(function(element) {
     element.classList.add("hidden");
-    element.disabled = true;
-  })
+    
+    element.querySelectorAll("input").forEach(function(input) {
+      input.disabled = true;
+      input.required = false;
+    });
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
