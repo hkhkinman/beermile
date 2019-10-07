@@ -13,17 +13,17 @@ function hideElements(elements) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  const attendingSelect = document.querySelector(".js-attending-select");
-  const attendeeElements = document.querySelectorAll(".js-for-attendees");
-  const nonAttendeeElements = document.querySelectorAll(".js-for-non-attendees");
+  const roleSelect = document.querySelector(".js-role-select");
+  const soloElements = document.querySelectorAll(".js-for-solo");
+  const teamElements = document.querySelectorAll(".js-for-team");
 
-  attendingSelect.addEventListener("change", function(event) {
-    if (event.target.value === "Yes") {
-      showElements(attendeeElements);
-      hideElements(nonAttendeeElements);
+  roleSelect.addEventListener("change", function(event) {
+    if (event.target.value === "team") {
+      showElements(teamElements);
+      hideElements(soloElements);
     } else {
-      showElements(nonAttendeeElements);
-      hideElements(attendeeElements);
+      showElements(soloElements);
+      hideElements(teamElements);
     }
   });
 });

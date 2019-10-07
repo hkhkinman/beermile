@@ -3,61 +3,115 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holden Housewarming Party</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <title>Nicky's 30th Birthday Beer Mile y Fiesta</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
     <link href="./styles/main.css" rel="stylesheet">
     <script type="text/javascript" src="./scripts/main.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="content-container">
-        <img class="header-image" src="./images/housewarming-header-600.gif" alt="housewarming party">
+        <img class="header-image" src="./images/wordmark.png" alt="nicky beer mile">
 
         <div class="content">
           <p>
-            We got a house.<br>
-            <strong>Let’s warm it up.</strong>
+            Let's celebrate our favorite drunk runner, Nicky Bobby Holden. His dying wish is to have a beer mile in his honor. What's a beer mile? Excellent question. It's an oddly regulated sport that has lots of rules. Familiarize yourself <a href="https://www.beermile.com/rules">here</a>. The only custom rule we're instating is that you can run the event as a pair. As in, four laps (.25mi each) and four beers split between a maximum of two people.
+          </p>
+          
+          <p>
+            <strong>Bring your own beer mile beers!</strong> Remember, they must be "fermented alcoholic beverages brewed from malted cereal grains and flavored with hops" at least 5% in ABV and in a 12oz, non-specialized bottle or can. National park rules apply (carry in, carry out). We'll have a variety of booze and recovery snacks for everybody at our house afterward.
           </p>
 
           <p class="big-copy">
-            <strong>Saturday, <span class="nowrap">December 8, 2018</span></strong><br>
-            6pm til
+            <strong>Saturday, <span class="nowrap">November 9, 2019</span></strong><br>
+            Gather at 3:00pm<br>
+            Gun goes off 3:15pm<br>
+            Drinking continues afterward
           </p>
 
           <p>
-            <a href="https://goo.gl/maps/og2rFV3Lius" target="_blank" class="address">
-              4751 Greene Street<br>
-              Ocean Beach<br>
-              San Diego, CA 92107<br>
-            </a>
+            <a href="https://goo.gl/maps/ESU2AGuLVy9fYJ9s9" target="_blank" class="address">
+              Dusty Rhodes Park<br>
+              2469 Sunset Cliffs Blvd<br>
+              San Diego, CA 92107<br></a>
+              After party at the Holden Haus & OB bars
           </p>
+          
+          <p>
+          	RSVP as an individual runner, team of two, or sexy referee
+		  </p>
 
           <form name="rsvp" method="POST" action="/success.html" netlify>
-            <div class="form-group">
-              <label for="name">Your name(s)?</label>
-              <input type="input" id="name" name="name" autocomplete="off" autofill="off" required>
+          	<div class="form-group">
+              <label for="role">I am/we are:</label>
+              <select id="role" name="role" class="js-role-select">
+                <option value="solo">Running the beer mile</option>
+                <option value="team">Running the beer mile as a team of two</option>
+                <option value="ref">Drunk refereeing/spectating</option>
+              </select>           
             </div>
 
-            <div class="form-group">
-              <label for="attending">Can you make it?</label>
-              <select id="attending" name="attending" class="js-attending-select">
-                <option value="Yes">Yes!</option>
-                <option value="No">No.</option>
-              </select>
+            <div class="js-for-solo">
+              <div class="form-group">
+                <label for="name">Your name?</label>
+                <input type="input" id="name" name="name" autocomplete="off" autofill="off" required>
+              </div>
+
+              <div class="form-group">
+                <label for="t-shirt-size">What's your t-shirt size?<br>
+                  <span class="label-helper">Shirts will be ~$15 and made of athletic material. Unisex sizing (the site we're using say the shirts run a tad big)</span>
+                </label>
+                <select id="t-shirt-size" name="t-shirt-size">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="none">No shirt for me, I'll be naked</option>
+                </select>
+              </div>
             </div>
 
-            <div class="form-group js-for-attendees">
-              <label for="attendee_count">How many of you are there?</label>
-              <select id="attendee_count" name="attendee_count" class="js-for-attendees">
-                <option value="1">Just me</option>
-                <option value="2">Me + a special someone (2 total)</option>
-                <option value="3">Me + modest squad (3 total)</option>
-                <option value="4">Me + biddy parade (4+ total)</option>
-              </select>
-            </div>
+            <div class="js-for-team hidden">
+              <div class="form-group">
+                <label for="name-1">Runner 1's name</label>
+                <input type="input" id="name-1" name="name-1" autocomplete="off" autofill="off" required>
+              </div>
 
-            <div class="form-group js-for-non-attendees hidden big-copy">
-              😭😭😭
+              <div class="form-group">
+                <label for="t-shirt-size-1">
+                  Runner 1's t-shirt size<br>
+                  <span class="label-helper">Shirts will be ~$15 and made of athletic material. Unisex sizing (the site we're using say the shirts run a tad big)</span>
+                </label>
+                <select id="t-shirt-size-1" name="t-shirt-size-1">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="none">No shirt for me, I'll be naked</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="name-2">Runner 2's name</label>
+                <input type="input" id="name-2" name="name-2" autocomplete="off" autofill="off" required>
+              </div>
+
+              <div class="form-group">
+                <label for="t-shirt-size-2">
+                  Runner 2's t-shirt size<br>
+                  <span class="label-helper">Shirts will be ~$15 and made of athletic material. Unisex sizing (the site we're using say the shirts run a tad big)</span>
+                </label>
+                <select id="t-shirt-size-2" name="t-shirt-size-2">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="none">No shirt for me, I'll be naked</option>
+                </select>
+              </div>
             </div>
 
             <div class="form-group">

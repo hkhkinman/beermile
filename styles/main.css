@@ -1,8 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #ff308a;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #ffc700;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #555555;
 }
 
@@ -11,13 +11,21 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: #e0e0e0;
+  background-image: url("../images/peeberbeercopy.png");
+  background-color: #112D73;
+  background-attachment: fixed;
 }
 
 .content-container {
   background-color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    opacity: 0.9;
+  }
 }
 
 .content {
@@ -32,12 +40,12 @@ html, body {
   letter-spacing: 2px;
 }
 
-a.address {
-  color: #ff308a;
+a {
+  color: #1749BA;
   text-decoration: none;
 }
 
-a.address:hover {
+a:hover {
   font-weight: 700;
 }
 
@@ -46,10 +54,12 @@ a.address:hover {
 }
 
 .header-image {
+  display: block;
   border: 0;
-  margin: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: 85%;
   height: auto;
+  padding-top: 25px;
 }
 
 .form-group {
@@ -68,6 +78,12 @@ label {
   display: block;
   font-weight: 700;
   margin-bottom: 5px;
+}
+
+.label-helper {
+  font-weight: 400;
+  font-size: 90%;
+  line-height: 125%;
 }
 
 form {
@@ -99,7 +115,7 @@ textarea {
 
 button {
   color: #ffffff;
-  background-color: #ff308a;
+  background-color: #112D73;
   transition: all 300ms ease-in;
   padding: 20px;
   text-transform: uppercase;
@@ -109,7 +125,7 @@ button {
 }
 
 button:hover, button:focus {
-  color: #555555;
-  background-color: #58ed70;
+  color: #112D73;
+  background-color: #ffc700;
   cursor: pointer;
 }
