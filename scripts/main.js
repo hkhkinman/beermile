@@ -2,7 +2,7 @@ function showElements(elements) {
   elements.forEach(function(element) {
     element.classList.remove("hidden");
 
-    element.querySelectorAll("input").forEach(function(input) {
+    element.querySelectorAll("input, select").forEach(function(input) {
       input.disabled = false;
       input.required = true;
     });
@@ -13,7 +13,8 @@ function hideElements(elements) {
   elements.forEach(function(element) {
     element.classList.add("hidden");
     
-    element.querySelectorAll("input").forEach(function(input) {
+    debugger;
+    element.querySelectorAll("input, select").forEach(function(input) {
       input.disabled = true;
       input.required = false;
     });
