@@ -105,8 +105,8 @@ input, select, textarea, button {
 }
 
 input:focus, select:focus, textarea:focus, button:focus {
-  box-shadow: 0 0 5px rgba(255, 48, 138, 1);
-  border: 1px rgba(255, 48, 138, 1);
+  box-shadow: 0 0 5px rgba(255, 199, 0, 1);
+  border: 1px rgba(255, 199, 0, 1);
 }
 
 textarea {
